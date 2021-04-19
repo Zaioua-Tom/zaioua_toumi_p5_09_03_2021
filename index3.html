@@ -4,11 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orinoco site de vente en ligne-panier</title>
+    <title>Orinoco site de vente en ligne-confirmation commande</title>
     <meta name="description" content="Orinoco est un site de vente en ligne spécialisé camera vintage, ours en peluche fait main, meubles en chêne">
     <meta name="robots" content="index, follow">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/da042e0cd0.js" crossorigin="anonymous"></script>
+    <script src="index3.js" async></script>
 </head>
 <body>
-    
+    <!--Header-->
+    <header>
+        <div class="website_logo">
+            <a href="index.html">
+                <img src="images/logo_orinoco2.png" alt="website logo"/>
+            </a>
+        </div>   
+        <nav class="navigation" >  
+          <a class="nav_title" href="index.html">Accueil</a>
+        </nav>  
+    </header>
+    <!--section1-->
+    <section>
+      <h1>Détail de votre panier</h1>
+    </section>
+    <!--section2-->
+    <main>
+        <section id="cart">
+          <h3 id="cart-total">
+            
+          </h3>
+        </section>
+        <p class="info">Merci de remplir vos coordonnées pour valider votre commande</p>
+        <div class="container">
+          <form class="formulaire">
+            <label for="chooseGender"></label>
+            <input type="text" id="chooseGender" class="formDesign" name="chooseGender" placeholder="Entrez votre civilité"/>
+            <p id="chooseGenderErrorMessage" class="form-error"></p>
+
+            <label for="lastName"></label>
+            <input type="text" id="lastName" class="formDesign" name="lastName" placeholder="Entrez votre nom"/>
+            <p id="lastNameErrorMessage" class="form-error"></p>
+
+            <label for="firstName"></label>
+            <input type="text" id="firstName" class="formDesign" name="firstName" placeholder="Entrez votre prénom" />
+            <p id="firstNameErrorMessage" class="form-error"></p>
+  
+            <label for="address"></label>
+            <input type="text" id="address" class="formDesign" name="address" placeholder="Entrez votre adresse"/>
+            <p id="addressErrorMessage" class="form-error"></p>
+  
+            <label for="city"></label>
+            <input type="text" id="city" class="formDesign" name="city" placeholder="Entrez votre ville"/>
+            <p id="cityErrorMessage" class="form-error"></p>
+  
+            <label for="email"></label>
+            <input type="email" id="email" class="formDesign" name="email" placeholder="Entrez votre mail" />
+            <p id="emailErrorMessage" class="form-error"></p>
+  
+            <input type="submit" id="btn" value="Valider" />
+          </form>
+        </div>
+      </main>
+      <!--footer-->
+    <footer>
+      Oricono copyright Zaioua Tom
+  </footer>
 </body>
 </html>
