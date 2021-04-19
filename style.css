@@ -1,0 +1,423 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+a {
+  color: black;
+}
+
+/*header multipages*/
+header {
+  font-family: "Playfair Display", serif;
+  height: 100px;
+  background-color: #f1efef;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 15px;
+  grid-template-areas: "logo . accueil panier";
+  align-items: center;
+  justify-content: center;
+}
+header .navigation {
+  grid-area: accueil;
+}
+header .nav_title2 {
+  grid-area: panier;
+  padding-left: 15px;
+}
+header .fas {
+  padding-left: 15px;
+}
+
+.website_logo {
+  padding-left: 20px;
+  grid-area: logo;
+}
+
+@media screen and (min-width: 750px) {
+  header {
+    grid-template-areas: "logo . accueil" "panier panier panier panier";
+  }
+
+  .fas {
+    padding-left: 5px;
+  }
+}
+/*section1 multipages*/
+h1 {
+  font-family: "Dancing Script", cursive, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+/*section 2 multipages*/
+main {
+  text-align: center;
+}
+
+/*Index*/
+/*section1*/
+#produits article {
+  width: 500px;
+  height: 500px;
+  background-color: black;
+  box-shadow: 3px 5px 5px #616161;
+  transition: box-shadow 1s;
+  margin: 40px auto;
+  padding: 20px 0;
+}
+
+#produits article button:hover a {
+  color: white;
+}
+
+.image_index1 {
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  padding-top: 32px;
+}
+
+.title_index1 {
+  font-family: "Dancing Script", cursive, sans-serif;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 28px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.price_index1 {
+  font-size: 20px;
+  margin: 0;
+  color: #3b5d45;
+  margin: auto;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.price_index1::after {
+  content: "€";
+}
+
+.button_index1 {
+  width: 20%;
+  margin-top: 20px;
+  color: black;
+  transition: color 1s, background-color 1s, border 1s;
+  background-color: #3b5d45;
+  padding: 10px 0;
+  border: 1px solid #3b5d45;
+  border-radius: 5px;
+}
+
+.button_index1:hover {
+  color: #3b5d45;
+  background-color: black;
+  border: 1px solid #3b5d45;
+}
+
+/*Tablet and Smartphone index*/
+@media screen and (min-width: 750px) {
+  #produits {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+@media screen and (max-width: 500px) {
+  #produits article {
+    width: 350px;
+    height: 400px;
+  }
+
+  .image_index1 {
+    width: 300px;
+    height: 200px;
+    padding-top: 10px;
+  }
+}
+/*Index2*/
+/*section 2*/
+.photo_product {
+  display: flex;
+}
+
+.image_index2 {
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  padding-top: 32px;
+}
+
+.description {
+  color: whitesmoke;
+  margin: auto;
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.title_index2 {
+  font-family: "Dancing Script", cursive, sans-serif;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 28px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.price_index2 {
+  font-size: 20px;
+  color: #3b5d45;
+  margin: auto;
+  padding: 15px 0;
+  font-weight: bold;
+}
+
+.price_index2::after {
+  content: "€";
+}
+
+button {
+  width: 20%;
+  margin-top: 15px;
+  color: black;
+  transition: color 1s, background-color 1s, border 1s;
+  background-color: #3b5d45;
+  padding: 10px 0;
+  border: 1px solid #3b5d45;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  color: #3b5d45;
+  background-color: black;
+  border: 1px solid #3b5d45;
+}
+
+#product {
+  background-color: black;
+  margin: 40px auto;
+  padding: 20px 0;
+}
+
+.add-to-cart {
+  color: whitesmoke;
+  margin: auto;
+  padding-top: 15px;
+}
+
+label {
+  color: whitesmoke;
+  font-family: "Playfair Display", serif;
+}
+
+select {
+  color: #3b5d45;
+  background-color: whitesmoke;
+  font-family: "Playfair Display", serif;
+}
+
+/*Tablet and Smartphone index2*/
+@media screen and (max-width: 500px) {
+  #product article {
+    width: 200px;
+    height: 300px;
+  }
+
+  .photo_product {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image_index2 {
+    width: 300px;
+    height: 200px;
+  }
+
+  .description {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  button {
+    border-radius: 30px;
+  }
+}
+/*Index3*/
+/*Section2*/
+.product_index3 {
+  border-top: black solid 1px;
+  max-width: 700px;
+  margin: 30px auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px 0px 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.image_index3 {
+  width: 100px;
+  height: 50px;
+}
+
+.remove {
+  color: red;
+  cursor: pointer;
+}
+
+#cart {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+}
+
+#cart-total {
+  font-family: "Playfair Display", serif;
+  border: #3b5d45 solid 5px;
+  background-color: black;
+  color: whitesmoke;
+  max-width: 150px;
+  margin: 50px auto 200px auto;
+}
+
+.price::after {
+  content: "€";
+}
+
+.info {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 30px 0 30px 0;
+}
+
+.formulaire {
+  background-color: #3b5d45;
+}
+
+.formDesign {
+  margin: 15px 0;
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: black;
+  font-size: 15px;
+  font-family: "Playfair Display", serif;
+  border: none;
+}
+
+input {
+  color: whitesmoke;
+}
+
+::placeholder {
+  color: whitesmoke;
+}
+
+#btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: black;
+  color: whitesmoke;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+  transition: color 1s, background-color 1s, border 1s;
+  border: none;
+}
+
+#btn:hover {
+  color: whitesmoke;
+  background-color: #3b5d45;
+  border: 1px solid black;
+}
+
+.formError {
+  font-family: "Playfair Display", serif;
+  color: red;
+}
+
+/*Tablet and Smartphone index3*/
+@media screen and (max-width: 500px) {
+  .product_index3 {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+  }
+
+  .image_index3 {
+    grid-row: 1/3;
+  }
+
+  .remove {
+    grid-column: 3/4;
+    color: red;
+  }
+}
+/*Index4*/
+/*article*/
+#confirmation {
+  background-color: black;
+  font-family: "Playfair Display", serif;
+  margin: 30px 0 30px 0;
+  padding: 30px;
+}
+
+.thanks, .order-id, .total-price, .mail {
+  color: whitesmoke;
+  padding-top: 30px;
+}
+
+.endWords, .endWords2 {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.endWords2 {
+  margin-bottom: 30px;
+}
+
+.retour {
+  color: black;
+  transition: color 1s, background-color 1s, border 1s;
+  background-color: #3b5d45;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  border: 1px solid #3b5d45;
+  border-radius: 5px;
+}
+
+.retour:hover {
+  color: whitesmoke;
+  background-color: black;
+  border: 1px solid #3b5d45;
+}
+
+/*footer multipages*/
+footer {
+  margin-top: 30px;
+  font-family: "Playfair Display", serif;
+  height: 100px;
+  background-color: #f1efef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */
