@@ -41,7 +41,7 @@ async function displayCart() {
       cartInformation.products.push(productId); 
 
       /*Fourni l'affichage du/des produits du panier*/
-      renderCart(productName, productPrice, productImg); // 
+      renderCart(productName, productPrice, productImg);  
 
       const remove  = document.querySelectorAll(".remove")[i];
       const article = document.querySelectorAll("article")[i];
@@ -246,6 +246,11 @@ btn.addEventListener("click", async (e) => {
     /*Efface les données du local storage une fois la commande validée.*/
     window.localStorage.clear();
     /*Redirige vers la page de confirmation de commande*/
-    window.location =`./index4.html?id=${response.orderId}&price=${totalPrice}&user=${lastName.value}&first=${firstName.value}&mail=${email.value}`; 
+    if (totalPrice > 1) {
+      window.location =`./index4.html?id=${response.orderId}&price=${totalPrice}&user=${lastName.value}&first=${firstName.value}&mail=${email.value}`; 
+    }
+    else{
+      alert("Votre panier est vide")
+    }
   }
 });
