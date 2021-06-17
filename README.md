@@ -1,6 +1,17 @@
-# Orinoco #
+Projet n°5  "Orinoco " site e-commerce
 
-This is the back end server for Project 5 of the Junior Web Developer path.
+La stack technique pour ce projet: HTML, SCASS, JAVASCRIPT, NODEJS
+
+Compétences acquises : 
+
+-Interagir avec un web service avec JavaScript
+
+-Valider des données issues de sources externes
+
+-Créer un plan de test pour une application
+
+-Gérer des événements JavaScript
+
 
 ### Prerequisites ###
 
